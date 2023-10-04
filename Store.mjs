@@ -8,7 +8,6 @@ const proxiedStore = new Proxy(Store, {
     if (property === 'counter') {
       window.dispatchEvent(new Event('countchange'));
     }
-
     return true;
   },
 });

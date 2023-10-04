@@ -10,12 +10,14 @@
   <body>
     <div id="main">
       <h1>Counter</h1>
-      <button id="create">Create Counter</button>
+      <button data-counter="create" id="create">Create Counter</button>
+      <button data-counter="increaseAll">Increase All</button>
+      <button data-counter="decreaseAll">Decrease All</button>
       <template id="counter-template">
         <div class="counter">
           <p>Counter</p>
           <p class="count"></p>
-          <button class="button">Increase</button>
+          <button data-counter="increase" class="button">Increase</button>
         </div>
       </template>
     </div>

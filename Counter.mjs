@@ -25,9 +25,11 @@ export class Counter extends HTMLElement {
 
     this.render();
 
-    this.root.querySelector('button').addEventListener('click', () => {
-      app.store.counter = increaseCount(app.store.counter, this.dataset.id);
-    });
+    this.root
+      .querySelector("button[data-counter='increase']")
+      .addEventListener('click', () => {
+        app.store.counter = increaseCount(app.store.counter, this.dataset.id);
+      });
 
     window.addEventListener('countchange', () => {
       this.render();
