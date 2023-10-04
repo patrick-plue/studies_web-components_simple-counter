@@ -37,7 +37,7 @@ export class Counter extends HTMLElement {
   }
 
   render() {
-    this.root.querySelector('.count').textContent =
+    this.root.querySelector('p[data-counter="count"]').textContent =
       app.store.counter[this.dataset.id].count;
   }
 }
